@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Resume & Bio-data</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        background-image: url('https://img.freepik.com/free-vector/abstract-technology-background_23-2148897676.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    header a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    section {
+        display: none;
+        padding: 120px 50px 50px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .home-buttons {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn {
+        background: #0a84ff;
+        padding: 12px 25px;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .resume-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    h1, h2 {
+        text-align: center;
+        text-shadow: 1px 1px 3px black;
+    }
+
+    ul { line-height: 1.6; }
+
+    .bio-card {
+        background: rgba(0,0,0,0.55);
+        padding: 25px;
+        border-radius: 12px;
+        width: 60%;
+        margin: auto;
+    }
+
+</style>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+        document.getElementById(pageId).classList.add("active");
+    }
+</script>
+</head>
+
+<body>
+
+<header>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('resume')">Resume</a>
+    <a href="#" onclick="showPage('biodata')">Bio-data</a>
+</header>
+
+<!------------------------- HOME PAGE ------------------------->
+<section id="home" class="active">
+    <h1>Welcome to My Portfolio</h1>
+    <p style="text-align:center; font-size:20px">Explore my Resume and Bio-data</p>
+
+    <div class="home-buttons">
+        <a class="btn" onclick="showPage('resume')">View Resume</a>
+        <a class="btn" onclick="showPage('biodata')">View Bio-data</a>
+    </div>
+</section>
+
+<!------------------------- RESUME PAGE ----------------------->
+<section id="resume">
+    <h1>Resume</h1>
+
+    <div class="resume-container">
+
+        <!-- LEFT SIDE -->
+        <div>
+            <h2>Education</h2>
+            <ul>
+                <li>B.E CSE – SJMIT (2022-2026)</li>
+                <li>PUC – Don Bosco PU College (2020-2022)</li>
+                <li>SSLC – Score: 96%</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python & Java basics</li>
+                <li>SQL & DBMS</li>
+                <li>Cloud & Git</li>
+            </ul>
+
+            <h2>Experience</h2>
+            <ul>
+                <li>Internship – Web Development (1 Month)</li>
+                <li>Worked on real-time responsive web applications</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div>
+            <h2>Projects</h2>
+            <ul>
+                <li>Online Wear Sales Web App</li>
+                <li>AI Copilot Based Assistance System</li>
+                <li>Traffic Monitoring & Accident Control System</li>
+            </ul>
+
+            <h2>Certificates</h2>
+            <ul>
+                <li>Web Development – Internshala</li>
+                <li>Python Basics – Infosys Springboard</li>
+                <li>Cloud Computing – AWS Workshop</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!------------------------- BIO DATA PAGE --------------------->
+<section id="biodata">
+    <h1>Bio-data</h1>
+
+    <div class="bio-card">
+        <p><b>Name:</b> Nithya S</p>
+        <p><b>Age:</b> 20</p>
+        <p><b>Gender:</b> Female</p>
+        <p><b>Nationality:</b> Indian</p>
+        <p><b>DOB:</b> 15-05-2005</p>
+        <p><b>Languages:</b> English, Kannada, Hindi</p>
+        <p><b>Email:</b> nithya@gmail.com</p>
+        <p><b>Phone:</b> +91 9876543210</p>
+        <p><b>LinkedIn:</b> linkedin.com/in/nithya</p>
+        <p><b>GitHub:</b> github.com/nithya</p>
+        <p><b>Address:</b> Karnataka, India</p>
+    </div>
+</section>
+
+</body>
+</html>
